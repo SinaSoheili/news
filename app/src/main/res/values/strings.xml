@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">news</string>
+
+    <string name="title_page_country">country</string>
+    <string name="title_page_category">category</string>
+
 </resources>
