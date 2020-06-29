@@ -1,8 +1,10 @@
-package ir.sinasoheili.news;
+package ir.sinasoheili.news.VIEW;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import ir.sinasoheili.news.R;
 
 public class MainActivity extends AppCompatActivity
 {
