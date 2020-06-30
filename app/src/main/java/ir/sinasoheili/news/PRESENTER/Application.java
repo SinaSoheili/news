@@ -1,5 +1,11 @@
 package ir.sinasoheili.news.PRESENTER;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+import org.greenrobot.eventbus.EventBus;
+
 import ir.sinasoheili.news.MODEL.Source;
 
 public class Application extends android.app.Application
@@ -23,18 +29,20 @@ public class Application extends android.app.Application
             {
                 SourcePreferenceManager spm = SourcePreferenceManager.getInstance(Application.this);
                 spm.saveSource(items);
+
+                EventBus.getDefault().post(new Boolean(true));
             }
 
             @Override
             public void onResponseNoSuccess(String messaage)
             {
-
+                EventBus.getDefault().post(new Boolean(false));
             }
 
             @Override
             public void onFailure(String message)
             {
-
+                EventBus.getDefault().post(new Boolean(false));
             }
         });
     }

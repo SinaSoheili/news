@@ -62,7 +62,7 @@ public class CountryItemAdapter extends RecyclerView.Adapter<CountryItemAdapter.
         public void fill(CountryCount cc)
         {
             tv_country.setText(cc.getCountryName());
-            tv_source_count.setText(cc.getCount());
+            tv_source_count.setText(String.valueOf(cc.getCount()));
         }
     }
 }
