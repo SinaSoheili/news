@@ -1,6 +1,7 @@
 package ir.sinasoheili.news.VIEW;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,8 +47,9 @@ public class SourceListAdapter extends RecyclerView.Adapter<SourceListAdapter.So
         return allItem.size();
     }
 
-    protected class SourceListAdapter_viewHolder extends RecyclerView.ViewHolder
+    protected class SourceListAdapter_viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
+        private Source source;
         private TextView tv_name;
         private TextView tv_category;
         private TextView tv_country;
@@ -59,13 +61,24 @@ public class SourceListAdapter extends RecyclerView.Adapter<SourceListAdapter.So
             tv_name = itemView.findViewById(R.id.tv_source_name);
             tv_category = itemView.findViewById(R.id.tv_source_category);
             tv_country = itemView.findViewById(R.id.tv_source_country);
+
+            itemView.setOnClickListener(this);
         }
 
-        public void fill(Source s)
+        public void fill(Source source)
         {
-            tv_name.setText(s.getName());
-            tv_category.setText(s.getCategory());
-            tv_country.setText(s.getCountry());
+            this.source = source;
+            tv_name.setText(source.getName());
+            tv_category.setText(source.getCategory());
+            tv_country.setText(source.getCountry());
+        }
+
+        @Override
+        public void onClick(View v)
+        {
+            Intent intent = new Intent(v.getContext() , ArticleListActivity.class);
+            intent.putExtra("SOURCE" , source);
+            v.getContext().startActivity(intent);
         }
     }
 }
