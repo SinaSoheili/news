@@ -59,7 +59,7 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemAdapte
         public void fill(CategoryCount cc)
         {
             tv_category.setText(cc.getCategory());
-            tv_source_count.setText(cc.getCount());
+            tv_source_count.setText(String.valueOf(cc.getCount()));
         }
     }
 }
