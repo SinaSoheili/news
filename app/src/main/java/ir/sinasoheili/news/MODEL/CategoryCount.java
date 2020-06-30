@@ -1,6 +1,8 @@
 package ir.sinasoheili.news.MODEL;
 
-public class CategoryCount
+import java.io.Serializable;
+
+public class CategoryCount implements Serializable
 {
     private String category;
     private int count;

@@ -1,6 +1,8 @@
 package ir.sinasoheili.news.MODEL;
 
-public class CountryCount
+import java.io.Serializable;
+
+public class CountryCount implements Serializable
 {
     private String countryName;
     private int count;

@@ -1,5 +1,6 @@
 package ir.sinasoheili.news.VIEW;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,11 +45,12 @@ public class CountryItemAdapter extends RecyclerView.Adapter<CountryItemAdapter.
         holder.fill(allItem.get(position));
     }
 
-    protected class CountryItemAdapter_ViewHolder extends RecyclerView.ViewHolder
+    protected class CountryItemAdapter_ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
         private ImageView iv_flag_country;
         private TextView tv_country;
         private TextView tv_source_count;
+        private CountryCount cc;
 
         public CountryItemAdapter_ViewHolder(@NonNull View itemView)
         {
@@ -57,12 +59,25 @@ public class CountryItemAdapter extends RecyclerView.Adapter<CountryItemAdapter.
             iv_flag_country = itemView.findViewById(R.id.iv_flag_country);
             tv_country = itemView.findViewById(R.id.tv_country);
             tv_source_count = itemView.findViewById(R.id.tv_country_source_count);
+
+            itemView.setOnClickListener(this);
         }
 
         public void fill(CountryCount cc)
         {
+            this.cc = cc;
             tv_country.setText(cc.getCountryName());
             tv_source_count.setText(String.valueOf(cc.getCount()));
+        }
+
+        @Override
+        public void onClick(View v)
+        {
+            Intent intent = new Intent(v.getContext() , SourceList.class);
+
+            intent.putExtra("COUNTRY_COUNT" , cc);
+
+            v.getContext().startActivity(intent);
         }
     }
 }
