@@ -68,6 +68,14 @@ public class CountryItemAdapter extends RecyclerView.Adapter<CountryItemAdapter.
             this.cc = cc;
             tv_country.setText(cc.getCountryName());
             tv_source_count.setText(String.valueOf(cc.getCount()));
+
+            iv_flag_country.setImageResource(itemView.getResources().getIdentifier
+                    (
+                            cc.getCountryName().replace(" ","_").toLowerCase() ,
+                            "drawable",
+                            itemView.getContext().getPackageName()
+                    )
+            );
         }
 
         @Override
