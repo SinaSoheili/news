@@ -13,7 +13,7 @@
         <item>ao#Angola</item>
         <item>ai#Anguilla</item>
         <item>aq#Antarctica</item>
-        <item>ag#Antigua and Barbuda</item>
+        <item>ag#Antigua</item>
         <item>ar#Argentina</item>
         <item>am#Armenia</item>
         <item>aw#Aruba</item>
@@ -51,7 +51,7 @@
         <item>cl#Chile</item>
         <item>cn#China</item>
         <item>cx#Christmas Island</item>
-        <item>cc#Cocos (Keeling) Islands</item>
+        <item>cc#Cocos Islands</item>
         <item>co#Colombia</item>
         <item>km#Comoros</item>
         <item>cd#Congo</item>
@@ -126,7 +126,7 @@
         <item>kr#Korea</item>
         <item>kw#Kuwait</item>
         <item>kg#Kyrgyzstan</item>
-        <item>la#Lao People\'s Democratic Republic</item>
+        <item>la#Lao</item>
         <item>lv#Latvia</item>
         <item>lb#Lebanon</item>
         <item>ls#Lesotho</item>
@@ -186,7 +186,7 @@
         <item>qa#Qatar</item>
         <item>mk#Republic of North Macedonia</item>
         <item>ro#Romania</item>
-        <item>ru#Russian Federation</item>
+        <item>ru#Russian</item>
         <item>rw#Rwanda</item>
         <item>re#Réunion</item>
         <item>bl#Saint Barthélemy</item>
@@ -238,7 +238,7 @@
         <item>ug#Uganda</item>
         <item>ua#Ukraine</item>
         <item>ae#United Arab Emirates</item>
-        <item>gb#United Kingdom of Great Britain and Northern Ireland</item>
+        <item>gb#United Kingdom</item>
         <item>um#United States Minor Outlying Islands</item>
         <item>us#United States of America</item>
         <item>uy#Uruguay</item>
