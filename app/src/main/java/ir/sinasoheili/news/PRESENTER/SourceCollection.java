@@ -1,5 +1,7 @@
 package ir.sinasoheili.news.PRESENTER;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 import ir.sinasoheili.news.MODEL.CategoryCount;
@@ -18,7 +20,7 @@ public class SourceCollection
             count = 0;
             Source si = allItem[i];
 
-            if(containCountry(si.getCountry() , result))
+            if(containCountry(si.getCountryFullName() , result))
             {
                 continue;
             }
@@ -31,7 +33,7 @@ public class SourceCollection
                 }
             }
 
-            result.add(new CountryCount(si.getCountry() , count));
+            result.add(new CountryCount(si.getCountryFullName() , count));
         }
 
         return result;
@@ -70,6 +72,8 @@ public class SourceCollection
     {
         for(CountryCount cc : list)
         {
+//            Log.i("tag" , cc.getCountryName()+"---"+CountryName);
+
             if(cc.getCountryName().equals(CountryName))
             {
                 return true;
@@ -98,7 +102,7 @@ public class SourceCollection
 
         for(Source s : allItem)
         {
-            if(s.getCountry().equals(country))
+            if(s.getCountryFullName().equals(country))
             {
                 result.add(s);
             }

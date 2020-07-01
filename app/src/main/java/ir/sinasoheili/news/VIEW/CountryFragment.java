@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -70,8 +71,8 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
     public void showRecyclerView(ArrayList<CountryCount> cc)
     {
         CountryItemAdapter adapter = new CountryItemAdapter(cc);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.VERTICAL , false));
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
     }
 
     @Subscribe()

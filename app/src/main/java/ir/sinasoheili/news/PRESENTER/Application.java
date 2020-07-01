@@ -21,7 +21,7 @@ public class Application extends android.app.Application
 
     private void getSource()
     {
-        API_SourcesHandler handler = new API_SourcesHandler();
+        API_SourcesHandler handler = new API_SourcesHandler(this);
         handler.start(new API_SourcesHandler.callBack()
         {
             @Override

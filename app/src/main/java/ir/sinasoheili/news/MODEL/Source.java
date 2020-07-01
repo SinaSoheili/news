@@ -11,6 +11,13 @@ public class Source implements Serializable
     private String category;
     private String language;
     private String country;
+    private String countryFullName;
+
+    //setter
+    public void setCountryFullName(String countryFullName)
+    {
+        this.countryFullName = countryFullName;
+    }
 
     //getter
     public String getId() {
@@ -39,5 +46,9 @@ public class Source implements Serializable
 
     public String getCountry() {
         return country;
+    }
+
+    public String getCountryFullName() {
+        return countryFullName;
     }
 }
