@@ -71,7 +71,7 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
     public void showRecyclerView(ArrayList<CountryCount> cc)
     {
         CountryItemAdapter adapter = new CountryItemAdapter(cc);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.VERTICAL , false));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
         recyclerView.setAdapter(adapter);
     }
 
