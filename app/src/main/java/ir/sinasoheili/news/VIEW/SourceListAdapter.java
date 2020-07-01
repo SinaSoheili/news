@@ -52,7 +52,9 @@ public class SourceListAdapter extends RecyclerView.Adapter<SourceListAdapter.So
         private Source source;
         private TextView tv_name;
         private TextView tv_category;
+        private TextView tv_description;
         private TextView tv_country;
+        private TextView tv_language;
 
         public SourceListAdapter_viewHolder(@NonNull View itemView)
         {
@@ -61,6 +63,8 @@ public class SourceListAdapter extends RecyclerView.Adapter<SourceListAdapter.So
             tv_name = itemView.findViewById(R.id.tv_source_name);
             tv_category = itemView.findViewById(R.id.tv_source_category);
             tv_country = itemView.findViewById(R.id.tv_source_country);
+            tv_description = itemView.findViewById(R.id.tv_source_description);
+            tv_language = itemView.findViewById(R.id.tv_source_language);
 
             itemView.setOnClickListener(this);
         }
@@ -70,7 +74,9 @@ public class SourceListAdapter extends RecyclerView.Adapter<SourceListAdapter.So
             this.source = source;
             tv_name.setText(source.getName());
             tv_category.setText(source.getCategory());
-            tv_country.setText(source.getCountry());
+            tv_description.setText(source.getDescription());
+            tv_country.setText(source.getCountryFullName());
+            tv_language.setText(source.getLanguage());
         }
 
         @Override
