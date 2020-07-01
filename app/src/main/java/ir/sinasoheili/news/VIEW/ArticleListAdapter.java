@@ -2,6 +2,7 @@ package ir.sinasoheili.news.VIEW;
 
 import android.content.Context;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
         private TextView tv_title;
         private TextView tv_author;
         private TextView tv_description;
+        private TextView tv_date;
 
         public ArticleListAdapter_viewHolder(@NonNull View itemView)
         {
@@ -59,13 +61,16 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
 
             tv_title = itemView.findViewById(R.id.article_list_title);
             tv_author = itemView.findViewById(R.id.article_list_author);
+            tv_date = itemView.findViewById(R.id.article_list_date);
             tv_description = itemView.findViewById(R.id.article_list_description);
         }
 
         public void fill(Article ar)
         {
             tv_title.setText(ar.getTitle());
-            tv_author.setText(ar.getAuthor());
+            tv_author.setText("author of : "+ar.getAuthor());
+            String[] date = ar.getPublishedAt().split("T");
+            tv_date.setText("published at : "+date[0]);
             tv_description.setText(ar.getDescription());
         }
     }

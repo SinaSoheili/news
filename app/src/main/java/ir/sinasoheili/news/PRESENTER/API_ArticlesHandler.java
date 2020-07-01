@@ -1,5 +1,9 @@
 package ir.sinasoheili.news.PRESENTER;
 
+import android.util.Log;
+
+import java.io.IOException;
+
 import ir.sinasoheili.news.MODEL.Article;
 import ir.sinasoheili.news.MODEL.ResponseArticles;
 import retrofit2.Call;
