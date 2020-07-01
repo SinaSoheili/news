@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,6 +47,7 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemAdapte
 
     protected class CategoryItemAdapter_ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
+        private ImageView iv_category;
         private TextView tv_category;
         private TextView tv_source_count;
         private CategoryCount cc;
@@ -56,6 +58,7 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemAdapte
 
             tv_category = itemView.findViewById(R.id.tv_category);
             tv_source_count = itemView.findViewById(R.id.tv_category_source_count);
+            iv_category = itemView.findViewById(R.id.iv_category);
 
             itemView.setOnClickListener(this);
         }
@@ -65,6 +68,44 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemAdapte
             this.cc = cc;
             tv_category.setText(cc.getCategory());
             tv_source_count.setText(String.valueOf(cc.getCount()));
+
+            switch (cc.getCategory())
+            {
+                case "business":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("business" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+
+                case "entertainment":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("entertainment" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+
+                case "general":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("general" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+
+                case "health":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("health" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+
+                case "science":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("science" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+
+                case "sports":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("sports" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+
+                case "technology":
+                    iv_category.setImageResource(itemView.getContext().getResources().getIdentifier
+                            ("technology" , "drawable" , itemView.getContext().getPackageName()));
+                    break;
+            }
         }
 
         @Override
