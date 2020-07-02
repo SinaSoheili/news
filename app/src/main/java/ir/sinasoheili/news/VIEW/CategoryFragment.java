@@ -79,7 +79,7 @@ public class CategoryFragment extends Fragment implements CategoryFragmentContra
         CategoryItemAdapter adapter = new CategoryItemAdapter(cc);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
 
-        LayoutAnimationController animator = AnimationUtils.loadLayoutAnimation(getContext() , R.anim.layout_list_item_anim);
+        LayoutAnimationController animator = AnimationUtils.loadLayoutAnimation(getContext() , R.anim.grid_layout_list_item_anim);
         recyclerView.setLayoutAnimation(animator);
 
         recyclerView.setAdapter(adapter);

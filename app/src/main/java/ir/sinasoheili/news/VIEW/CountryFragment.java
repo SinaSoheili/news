@@ -81,7 +81,7 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
         CountryItemAdapter adapter = new CountryItemAdapter(cc);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
 
-        LayoutAnimationController animator = AnimationUtils.loadLayoutAnimation(getContext() , R.anim.layout_list_item_anim);
+        LayoutAnimationController animator = AnimationUtils.loadLayoutAnimation(getContext() , R.anim.grid_layout_list_item_anim);
         recyclerView.setLayoutAnimation(animator);
 
         recyclerView.setAdapter(adapter);

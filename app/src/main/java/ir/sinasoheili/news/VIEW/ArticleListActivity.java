@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.ProgressBar;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -61,6 +63,10 @@ public class ArticleListActivity extends AppCompatActivity implements ArticleLis
 
         ArticleListAdapter adapter = new ArticleListAdapter(ArticleListActivity.this , items);
         rv.setLayoutManager(new LinearLayoutManager(ArticleListActivity.this , RecyclerView.VERTICAL , false));
+
+        LayoutAnimationController lac = AnimationUtils.loadLayoutAnimation(ArticleListActivity.this , R.anim.layout_list_item_anim);
+        rv.setLayoutAnimation(lac);
+
         rv.setAdapter(adapter);
     }
 

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -59,6 +61,10 @@ public class SourceList extends AppCompatActivity implements SourceListContract.
     {
         SourceListAdapter adapter = new SourceListAdapter(SourceList.this ,items);
         rv.setLayoutManager(new LinearLayoutManager(SourceList.this , RecyclerView.VERTICAL , false));
+
+        LayoutAnimationController lac = AnimationUtils.loadLayoutAnimation(SourceList.this , R.anim.layout_list_item_anim);
+        rv.setLayoutAnimation(lac);
+
         rv.setAdapter(adapter);
     }
 }
