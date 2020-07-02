@@ -1,6 +1,8 @@
 package ir.sinasoheili.news.MODEL;
 
-public class Article
+import java.io.Serializable;
+
+public class Article implements Serializable
 {
     private Source source;
     private String author;

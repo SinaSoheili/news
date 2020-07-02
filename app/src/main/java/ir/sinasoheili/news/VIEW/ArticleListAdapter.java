@@ -1,6 +1,7 @@
 package ir.sinasoheili.news.VIEW;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,12 +49,14 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
         return items.length;
     }
 
-    protected class ArticleListAdapter_viewHolder extends RecyclerView.ViewHolder
+    protected class ArticleListAdapter_viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
         private TextView tv_title;
         private TextView tv_author;
         private TextView tv_description;
         private TextView tv_date;
+
+        private Article article;
 
         public ArticleListAdapter_viewHolder(@NonNull View itemView)
         {
@@ -63,15 +66,27 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
             tv_author = itemView.findViewById(R.id.article_list_author);
             tv_date = itemView.findViewById(R.id.article_list_date);
             tv_description = itemView.findViewById(R.id.article_list_description);
+
+            itemView.setOnClickListener(this);
         }
 
         public void fill(Article ar)
         {
+            this.article = ar;
+
             tv_title.setText(ar.getTitle());
             tv_author.setText("author of : "+ar.getAuthor());
             String[] date = ar.getPublishedAt().split("T");
             tv_date.setText("published at : "+date[0]);
             tv_description.setText(ar.getDescription());
+        }
+
+        @Override
+        public void onClick(View v)
+        {
+            Intent intent = new Intent(v.getContext() , ArticleActivity.class);
+            intent.putExtra("ARTICLE" , article);
+            v.getContext().startActivity(intent);
         }
     }
 }

@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VIEW.ArticleListActivity"></activity>
+        <activity android:name=".VIEW.ArticleActivity"></activity>
+        <activity android:name=".VIEW.ArticleListActivity" />
         <activity android:name=".VIEW.SourceList" />
         <activity android:name=".VIEW.MainActivity">
             <intent-filter>
