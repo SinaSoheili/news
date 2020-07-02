@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +28,7 @@ import ir.sinasoheili.news.R;
 public class CountryFragment extends Fragment implements CountryFragmentContract.CountryFragmentContract_view
 {
     private RecyclerView recyclerView;
+    private ProgressBar progressBar;
 
     private CountryFragmentContract.CountryFragmentContract_presenter presenter;
 
@@ -43,6 +45,8 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
         super.onViewCreated(view, savedInstanceState);
 
         InitObj(view);
+
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -66,11 +70,14 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
         presenter = new CountryFragmentPresenter(getContext() , this);
 
         recyclerView = view.findViewById(R.id.RecyclerView_Country_Fragment);
+        progressBar = view.findViewById(R.id.country_progressbar);
     }
 
     @Override
     public void showRecyclerView(ArrayList<CountryCount> cc)
     {
+        progressBar.setVisibility(View.GONE);
+
         CountryItemAdapter adapter = new CountryItemAdapter(cc);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
 

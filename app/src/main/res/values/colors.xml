@@ -7,7 +7,7 @@
     <color name="general_background">#6EC2CC</color>
 
     <color name="tab_layout_background">#14A0B1</color>
-    <color name="tab_layout_text">#4C4C4C</color>
+    <color name="tab_layout_text">#3C3F41</color>
     <color name="tab_layout_tab_selected">#353535</color>
 
     <color name="item_list_background">#FFFFFF</color>

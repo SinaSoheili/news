@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +28,7 @@ import ir.sinasoheili.news.R;
 public class CategoryFragment extends Fragment implements CategoryFragmentContract.CategoryFragmentContract_view
 {
     private RecyclerView recyclerView;
+    private ProgressBar progressBar;
 
     private CategoryFragmentContract.CategoryFragmentContract_presenter presenter;
 
@@ -66,11 +68,14 @@ public class CategoryFragment extends Fragment implements CategoryFragmentContra
         presenter = new CategoryFragmentPresenter(getContext() , this);
 
         recyclerView = view.findViewById(R.id.RecyclerView_Category_Fragment);
+        progressBar = view.findViewById(R.id.category_progressbar);
     }
 
     @Override
     public void showRecyclerView(ArrayList<CategoryCount> cc)
     {
+        progressBar.setVisibility(View.GONE);
+
         CategoryItemAdapter adapter = new CategoryItemAdapter(cc);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
 
