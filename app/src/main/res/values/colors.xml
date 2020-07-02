@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimaryDark">#0E8391</color>
+    <color name="colorAccent">#DC5125</color>
 
-    <color name="item_list_background">#D8D8D8</color>
+    <color name="general_background">#6EC2CC</color>
+
+    <color name="tab_layout_background">#14A0B1</color>
+    <color name="tab_layout_text">#4C4C4C</color>
+    <color name="tab_layout_tab_selected">#353535</color>
+
+    <color name="item_list_background">#FFFFFF</color>
+
+    <color name="tv_title">#272727</color>
+    <color name="tv_subtitle">#535353</color>
+    <color name="tv_content">#303030</color>
+
 </resources>

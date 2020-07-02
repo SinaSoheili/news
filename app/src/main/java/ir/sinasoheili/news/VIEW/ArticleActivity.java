@@ -12,7 +12,6 @@ import ir.sinasoheili.news.R;
 public class ArticleActivity extends AppCompatActivity
 {
     private TextView tv_title;
-    private TextView tv_author;
     private TextView tv_date;
     private TextView tv_description;
     private TextView tv_content;
@@ -38,7 +37,6 @@ public class ArticleActivity extends AppCompatActivity
     private void initObj()
     {
         tv_title = findViewById(R.id.tv_article_title);
-        tv_author = findViewById(R.id.tv_article_author);
         tv_date = findViewById(R.id.tv_article_date);
         tv_description = findViewById(R.id.tv_article_description);
         tv_content = findViewById(R.id.tv_article_content);
@@ -47,7 +45,6 @@ public class ArticleActivity extends AppCompatActivity
     private void fill()
     {
         tv_title.setText(article.getTitle());
-        tv_author.setText(article.getAuthor());
         tv_date.setText(article.getPublishedAt());
         tv_content.setText(article.getContent());
         tv_description.setText(article.getDescription());

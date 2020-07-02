@@ -1,16 +1,17 @@
 package ir.sinasoheili.news.VIEW;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -72,6 +73,10 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
     {
         CountryItemAdapter adapter = new CountryItemAdapter(cc);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
+
+        LayoutAnimationController animator = AnimationUtils.loadLayoutAnimation(getContext() , R.anim.layout_list_item_anim);
+        recyclerView.setLayoutAnimation(animator);
+
         recyclerView.setAdapter(adapter);
     }
 

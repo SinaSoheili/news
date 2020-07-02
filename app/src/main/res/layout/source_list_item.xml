@@ -7,13 +7,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:backgroundTint="@color/item_list_background">
+        android:layout_margin="@dimen/small_margin_list_item"
+        android:backgroundTint="@color/item_list_background"
+        app:cardCornerRadius="@dimen/item_list_card_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp">
+            android:padding="@dimen/padding_list_item">
             
             <TextView
                 android:id="@+id/tv_source_name"
@@ -22,6 +23,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:textStyle="bold"
+                android:textColor="@color/tv_title"
+                android:textSize="@dimen/tv_title_size"
                 />
             
             <TextView
@@ -31,6 +34,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:textStyle="italic"
+                android:textColor="@color/tv_subtitle"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
             <TextView
@@ -39,7 +44,9 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tv_source_category"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/big_margin_list_item"
+                android:textColor="@color/tv_content"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
             <TextView
@@ -49,7 +56,9 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_source_description"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:textStyle="italic"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/big_margin_list_item"
+                android:textColor="@color/tv_subtitle"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
             <TextView
@@ -59,7 +68,9 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_source_description"
                 app:layout_constraintRight_toRightOf="parent"
                 android:textStyle="italic"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/big_margin_list_item"
+                android:textColor="@color/tv_subtitle"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

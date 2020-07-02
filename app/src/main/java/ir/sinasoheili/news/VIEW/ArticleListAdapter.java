@@ -52,7 +52,6 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
     protected class ArticleListAdapter_viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
         private TextView tv_title;
-        private TextView tv_author;
         private TextView tv_description;
         private TextView tv_date;
 
@@ -63,7 +62,6 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
             super(itemView);
 
             tv_title = itemView.findViewById(R.id.article_list_title);
-            tv_author = itemView.findViewById(R.id.article_list_author);
             tv_date = itemView.findViewById(R.id.article_list_date);
             tv_description = itemView.findViewById(R.id.article_list_description);
 
@@ -75,7 +73,6 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
             this.article = ar;
 
             tv_title.setText(ar.getTitle());
-            tv_author.setText("author of : "+ar.getAuthor());
             String[] date = ar.getPublishedAt().split("T");
             tv_date.setText("published at : "+date[0]);
             tv_description.setText(ar.getDescription());

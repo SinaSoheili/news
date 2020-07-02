@@ -7,13 +7,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:backgroundTint="@color/item_list_background">
+        android:layout_margin="@dimen/small_margin_list_item"
+        android:backgroundTint="@color/item_list_background"
+        app:cardCornerRadius="@dimen/item_list_card_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:padding="@dimen/padding_list_item">
 
             <TextView
                 android:id="@+id/article_list_title"
@@ -23,37 +24,31 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:textStyle="bold"
-                />
-
-            <TextView
-                android:id="@+id/article_list_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/article_list_title"
-                app:layout_constraintBottom_toTopOf="@id/article_list_date"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="20dp"
-                android:textStyle="italic"
+                android:textColor="@color/tv_title"
+                android:textSize="@dimen/tv_title_size"
                 />
 
             <TextView
                 android:id="@+id/article_list_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@id/article_list_author"
+                app:layout_constraintTop_toBottomOf="@id/article_list_title"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/article_list_description"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/big_margin_list_item"
                 android:textStyle="italic"
+                android:textColor="@color/tv_subtitle"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
             <TextView
                 android:id="@+id/article_list_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/article_list_author"
+                app:layout_constraintTop_toBottomOf="@id/article_list_date"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/big_margin_list_item"
+                android:textColor="@color/tv_content"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -71,6 +73,10 @@ public class CategoryFragment extends Fragment implements CategoryFragmentContra
     {
         CategoryItemAdapter adapter = new CategoryItemAdapter(cc);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 2));
+
+        LayoutAnimationController animator = AnimationUtils.loadLayoutAnimation(getContext() , R.anim.layout_list_item_anim);
+        recyclerView.setLayoutAnimation(animator);
+
         recyclerView.setAdapter(adapter);
     }
 

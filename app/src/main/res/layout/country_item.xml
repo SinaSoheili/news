@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/item_list_background"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        app:cardCornerRadius="@dimen/category_country_card_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -34,6 +35,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="25dp"
+                android:textColor="@color/tv_content"
+                android:textSize="@dimen/tv_subtitle_size"
+                android:gravity="center"
                 />
 
             <TextView
@@ -45,6 +49,8 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/tv_subtitle"
+                android:textSize="@dimen/tv_subtitle_size"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

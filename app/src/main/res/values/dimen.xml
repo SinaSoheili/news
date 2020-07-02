@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="category_country_card_radius">8dp</dimen>
+    <dimen name="item_list_card_radius">4dp</dimen>
+
+    <dimen name="padding_list_item">10dp</dimen>
+    <dimen name="small_margin_list_item">5dp</dimen>
+    <dimen name="medium_margin_list_item">10dp</dimen>
+    <dimen name="big_margin_list_item">15dp</dimen>
+    <dimen name="margin_recycler_view">5dp</dimen>
+
+    <dimen name="padding_card_view">15dp</dimen>
+
+    <dimen name="tv_title_size">16sp</dimen>
+    <dimen name="tv_subtitle_size">14sp</dimen>
+
+</resources>
