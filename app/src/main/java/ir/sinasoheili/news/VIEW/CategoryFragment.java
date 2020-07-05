@@ -46,7 +46,7 @@ public class CategoryFragment extends Fragment implements CategoryFragmentContra
 
         InitObj(view);
 
-        presenter.readAllCategory();
+        readRequest();
     }
 
 

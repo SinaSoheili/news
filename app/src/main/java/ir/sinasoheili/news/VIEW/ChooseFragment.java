@@ -53,6 +53,7 @@ public class ChooseFragment extends Fragment implements ChooseFragmentContract.C
         initObj(view);
 
         progressBar.setVisibility(View.VISIBLE);
+        readRequest();
     }
 
     @Override
@@ -61,8 +62,6 @@ public class ChooseFragment extends Fragment implements ChooseFragmentContract.C
         super.onResume();
 
         EventBus.getDefault().register(this);
-
-        readRequest();
     }
 
     @Override

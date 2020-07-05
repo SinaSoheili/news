@@ -47,6 +47,8 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
         InitObj(view);
 
         progressBar.setVisibility(View.VISIBLE);
+
+        readRequest();
     }
 
     @Override
@@ -63,14 +65,6 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
         super.onStop();
 
         EventBus.getDefault().unregister(this);
-    }
-
-    @Override
-    public void onResume()
-    {
-        super.onResume();
-
-        readRequest();
     }
 
     private void InitObj(View view)
