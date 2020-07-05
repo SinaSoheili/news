@@ -24,6 +24,12 @@ public class ChooseFragmentPresenter implements ChooseFragmentContract.ChooseFra
     {
         SourcePreferenceManager pref = SourcePreferenceManager.getInstance(context);
         Source[] sources = pref.getSource();
+
+        if(sources == null)
+        {
+            return;
+        }
+
         SourceCollection collection = new SourceCollection();
         ArrayList<CountryCount> cc = collection.CollectionByCountry(sources);
         chooseView.showCountry(cc);
@@ -34,6 +40,12 @@ public class ChooseFragmentPresenter implements ChooseFragmentContract.ChooseFra
     {
         SourcePreferenceManager pref = SourcePreferenceManager.getInstance(context);
         Source[] sources = pref.getSource();
+
+        if(sources == null)
+        {
+            return;
+        }
+
         SourceCollection collection = new SourceCollection();
         ArrayList<CategoryCount> cc = collection.CollectionByCategory(sources);
         chooseView.showCategory(cc);

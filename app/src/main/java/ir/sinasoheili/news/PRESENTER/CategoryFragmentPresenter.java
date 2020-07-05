@@ -25,6 +25,11 @@ public class CategoryFragmentPresenter implements CategoryFragmentContract.Categ
         SourcePreferenceManager spm = SourcePreferenceManager.getInstance(context);
         Source[] allItem = spm.getSource();
 
+        if(allItem == null)
+        {
+            return;
+        }
+
         SourceCollection collection = new SourceCollection();
         ArrayList<CategoryCount> items = collection.CollectionByCategory(allItem);
 

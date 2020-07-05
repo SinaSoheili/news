@@ -25,6 +25,11 @@ public class CountryFragmentPresenter implements CountryFragmentContract.Country
         SourcePreferenceManager spm = SourcePreferenceManager.getInstance(context);
         Source[] list = spm.getSource();
 
+        if(list == null)
+        {
+            return;
+        }
+
         SourceCollection collection = new SourceCollection();
         ArrayList<CountryCount> cc = collection.CollectionByCountry(list);
 
