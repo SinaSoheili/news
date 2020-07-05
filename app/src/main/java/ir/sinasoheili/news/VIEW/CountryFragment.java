@@ -65,6 +65,14 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
         EventBus.getDefault().unregister(this);
     }
 
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+
+        readRequest();
+    }
+
     private void InitObj(View view)
     {
         presenter = new CountryFragmentPresenter(getContext() , this);
@@ -89,6 +97,14 @@ public class CountryFragment extends Fragment implements CountryFragmentContract
 
     @Subscribe()
     public void Result(Boolean b)
+    {
+        if(b)
+        {
+            readRequest();
+        }
+    }
+
+    private void readRequest()
     {
         presenter.readAllCountry();
     }

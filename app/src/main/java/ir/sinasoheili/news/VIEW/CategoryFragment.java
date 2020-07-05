@@ -45,7 +45,10 @@ public class CategoryFragment extends Fragment implements CategoryFragmentContra
         super.onViewCreated(view, savedInstanceState);
 
         InitObj(view);
+
+        presenter.readAllCategory();
     }
+
 
     @Override
     public void onStart()
@@ -87,6 +90,14 @@ public class CategoryFragment extends Fragment implements CategoryFragmentContra
 
     @Subscribe
     public void Result(Boolean b)
+    {
+        if(b)
+        {
+            readRequest();
+        }
+    }
+
+    private void readRequest()
     {
         presenter.readAllCategory();
     }
