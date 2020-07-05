@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity
 
     private CountryFragment countryFragment;
     private CategoryFragment categoryFragment;
+    private ChooseFragment chooseFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity
     {
         countryFragment = new CountryFragment();
         categoryFragment = new CategoryFragment();
+        chooseFragment = new ChooseFragment();
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
@@ -41,8 +43,8 @@ public class MainActivity extends AppCompatActivity
 
     private void initViewPager()
     {
-        Fragment[] fragments = {countryFragment , categoryFragment};
-        String[] pageTitles = {getString(R.string.title_page_country) , getString(R.string.title_page_category)};
+        Fragment[] fragments = {countryFragment , categoryFragment , chooseFragment};
+        String[] pageTitles = {getString(R.string.title_page_country) , getString(R.string.title_page_category) , getString(R.string.title_page_choose)};
 
         viewPager.setAdapter( new SlideAdapter(getSupportFragmentManager() , fragments , pageTitles));
         tabLayout.setupWithViewPager(viewPager);

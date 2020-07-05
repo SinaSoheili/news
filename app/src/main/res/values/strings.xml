@@ -3,6 +3,9 @@
 
     <string name="title_page_country">country</string>
     <string name="title_page_category">category</string>
+    <string name="title_page_choose">choose</string>
+
+    <string name="message_choose_dialog">please select one of items</string>
 
     <string-array name="country_full_name">
         <item>af#Afghanistan</item>
