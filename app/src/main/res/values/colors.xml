@@ -16,4 +16,6 @@
     <color name="tv_subtitle">#535353</color>
     <color name="tv_content">#303030</color>
 
+    <color name="floating_button">#1E4051</color>
+
 </resources>
