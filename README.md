@@ -2,9 +2,10 @@
 
 <div>
   <p>    
-    This is a news app for android.<br>
-    In this app news are in two typ of category : `country` and `subject`<br>
-    This app use APIs of `newsapi.org`
+    This is a news app for android platform.<br>
+    In this app you can find news in tow differend group : 'country' and 'subject'<br/>
+    You can choose which one you like and find related news on that specific category. 
+    This app use APIs of `newsapi.org` to get news data. 
   </p>
   
 
