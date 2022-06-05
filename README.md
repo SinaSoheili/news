@@ -2,9 +2,9 @@
 
 <div>
   <p>    
-    This is a news application for android platforms.<br>
-    In this app you can find news in two differend groups : 'country' and 'subject'<br/>
-    You can choose which one you like and find related news on that specific category. 
+    This is a news application for android platform.<br>
+    In this application, news are grouped in two category : 'country' and 'subject'<br/>
+    You can choose what category you want and enjoy reading news.
     This app uses APIs of `newsapi.org` to get data. 
   </p>
   
